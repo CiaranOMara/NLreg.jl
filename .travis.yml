@@ -19,7 +19,8 @@ jobs:
   include:
     - stage: Documentation
       julia: 1.4
-      script: julia --project=docs -e '
+      script: >
+          julia --project=docs -e '
           using Pkg;
           Pkg.develop(PackageSpec(path=pwd()));
           Pkg.instantiate();
